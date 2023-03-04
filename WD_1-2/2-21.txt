@@ -1,0 +1,68 @@
+1. 
+select * from dept where deptno = 30;
+
+2.
+SELECT `empno`,`ename`,`deptno` FROM emp；
+
+3.
+SELECT `ename`,`deptno` FROM emp
+where comm > sal;
+
+4.
+SELECT `ename`,`deptno` FROM emp
+where comm > sal * 0.6 ;
+
+5.
+SELECT * FROM emp
+where job = "manager"
+and deptno = 10
+UNION ALL
+select * from emp
+where deptno = 20;
+
+6.
+SELECT * FROM emp
+where job = "manager"
+and deptno = 10
+UNION 
+select * from emp
+where job = "clerk"
+and deptno = 20
+UNION
+select * from emp
+where sal >= 2000
+and job != "manager"
+and job != "clierk";
+
+7.
+select distinct job AS "不同的工作" from emp
+where comm > 0;
+
+8.
+select * from emp
+where comm < 100
+or comm = 0;
+
+9.
+select ename from emp
+where ename NOT LIKE '%R%';
+
+10.
+select * from emp
+ORDER BY ename ASC;
+
+11.
+select `ename`,`datet` from emp
+order by datet ASC;
+
+12.
+SELECT `ename`,`job`,`sal` FROM emp
+order by job DESC, sal ASC;
+
+13.
+select ename,
+date_format(datet,'%Y') AS YEAR,
+date_format(datet,'%m') AS MONTH,
+datet
+from emp
+ORDER BY month,year ASC;
