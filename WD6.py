@@ -29,7 +29,6 @@ if __name__ == "__main__":
     sheet1 = file.add_sheet('sheet1', cell_overwrite_ok=True)
     # sheet1.write(a,b,c) 函数中参数a、b、c分别对应行数、列数、单元格内容
     sheet1.write(0, 0, "药品名称")  # 第1行第1列
-    # 循环填入数据
     j = 0
     i = 0
     # print(range(len(all_list)))
